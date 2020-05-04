@@ -1,6 +1,6 @@
 {
   "name": "create-require",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Polyfill for Node.js (<= v12.2.0) module.createRequire",
   "repository": "nuxt-contrib/create-require",
   "license": "MIT",
