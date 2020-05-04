@@ -5,7 +5,7 @@
 [![Github Actions][github-actions-src]][github-actions-href]
 [![Codecov][codecov-src]][codecov-href]
 
-Polyfill for Node.js (<= v12.2.0) [`module.createRequire`](https://nodejs.org/api/modules.html#modules_module_createrequire_filename)
+Polyfill for Node.js [`module.createRequire`](https://nodejs.org/api/modules.html#modules_module_createrequire_filename) (<= v12.2.0)
 
 ## Install
 
@@ -23,8 +23,9 @@ function createRequire (filename: string | URL): NodeRequire;
 
 ```js
 const createRequire = require('create-require')
-const require = createRequire('path/to/test.js')
-const module = require('./test-sibling-module')
+
+const myRequire = createRequire('path/to/test.js')
+const myModule = myRequire('./test-sibling-module')
 ```
 
 ## License

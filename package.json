@@ -1,7 +1,7 @@
 {
   "name": "create-require",
   "version": "0.0.1",
-  "description": "Polyfill for Node.js (<= v12.2.0) module.createRequire",
+  "description": "Polyfill for Node.js module.createRequire (<= v12.2.0)",
   "repository": "nuxt-contrib/create-require",
   "license": "MIT",
   "contributors": [
@@ -26,12 +26,13 @@
   "scripts": {
     "lint": "eslint .",
     "release": "yarn test && standard-version && git push --follow-tags && npm publish",
-    "test": "yarn lint && yarn jest"
+    "test:matrix": "tap --no-esm ./test/matrix.js",
+    "test": "yarn lint && yarn test:matrix"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "latest",
     "eslint": "latest",
-    "jest": "latest",
+    "tap": "latest",
     "standard-version": "latest"
   }
 }
