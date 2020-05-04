@@ -1,0 +1,37 @@
+{
+  "name": "create-require",
+  "version": "0.0.0",
+  "description": "Polyfill for Node.js (<= v12.2.0) module.createRequire",
+  "repository": "nuxt-contrib/create-require",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Maël Nison",
+      "email": "nison.mael@gmail.com"
+    },
+    {
+      "name": "Paul Soporan",
+      "email": "paul.soporan@gmail.com"
+    },
+    {
+      "name": "Pooya Parsa",
+      "email": "pyapar@gmail.com"
+    }
+  ],
+  "main": "./create-require.js",
+  "files": [
+    "create-require.js",
+    "create-require.d.ts"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "release": "yarn test && standard-version && git push --follow-tags && npm publish",
+    "test": "yarn lint && yarn jest"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "latest",
+    "eslint": "latest",
+    "jest": "latest",
+    "standard-version": "latest"
+  }
+}
