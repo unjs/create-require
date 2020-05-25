@@ -26,7 +26,7 @@
   "scripts": {
     "lint": "eslint .",
     "release": "yarn test && standard-version && git push --follow-tags && npm publish",
-    "test:matrix": "tap --no-esm ./test/matrix.js",
+    "test:matrix": "tap --no-esm --no-timeout ./test/matrix.js",
     "test": "yarn lint && yarn test:matrix"
   },
   "devDependencies": {

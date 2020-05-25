@@ -42,5 +42,8 @@ jobs:
       - name: Test Matrix
         run: yarn test:matrix
 
+      - name: Collect Coverage
+        run: mkdir -p coverage && ./node_modules/.bin/tap --coverage-report=text-lcov | cat > coverage/lcov.info
+
       - name: Coverage
         uses: codecov/codecov-action@v1
