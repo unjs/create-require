@@ -2,7 +2,7 @@ const nativeModule = require('module')
 const path = require('path')
 const fs = require('fs')
 
-function createRequire(filename) {
+function createRequire (filename) {
   // Fallback to process.cwd() if no filename passed
   if (!filename) {
     filename = process.cwd()
