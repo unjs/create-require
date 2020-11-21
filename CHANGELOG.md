@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/nuxt-contrib/create-require/compare/v1.0.2...v1.1.0) (2020-11-21)
+
+
+### Features
+
+* fallback to process.cwd() if no filename provided either ([ae5e0d6](https://github.com/nuxt-contrib/create-require/commit/ae5e0d665945b980b82ae6e998146c32295a6734))
+
 ### [1.0.2](https://github.com/nuxt-contrib/create-require/compare/v1.0.1...v1.0.2) (2020-06-12)
 
 
