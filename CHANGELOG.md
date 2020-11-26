@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/nuxt-contrib/create-require/compare/v1.1.0...v1.1.1) (2020-11-26)
+
+
+### Bug Fixes
+
+* **types:** explicitly import the URL type ([#3](https://github.com/nuxt-contrib/create-require/issues/3)) ([66a98cc](https://github.com/nuxt-contrib/create-require/commit/66a98cc60a430c3689f11ad111c5fbf4574a37b6))
+
 ## [1.1.0](https://github.com/nuxt-contrib/create-require/compare/v1.0.2...v1.1.0) (2020-11-21)
 
 
