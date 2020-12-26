@@ -2,7 +2,7 @@ const nativeModule = require('module')
 const path = require('path')
 const fs = require('fs')
 
-function createRequire (filename) {
+function createRequire (filename, wrappedRequire) {
   // Fallback to process.cwd() if no filename passed
   if (!filename) {
     filename = process.cwd()
@@ -11,6 +11,10 @@ function createRequire (filename) {
   // If filename is dir, createRequire goes with parent directory, so we need fakepath
   if (isDir(filename)) {
     filename = path.join(filename, 'index.js')
+  }
+
+  if (wrappedRequire) {
+    return _createRequire(filename, wrappedRequire)
   }
 
   // Added in Node v12.2.0
@@ -28,10 +32,11 @@ function createRequire (filename) {
 }
 
 // Polyfill
-function _createRequire (filename) {
+function _createRequire (filename, wrappedRequire) {
   const mod = new nativeModule.Module(filename, null)
   mod.filename = filename
   mod.paths = nativeModule.Module._nodeModulePaths(path.dirname(filename))
+  mod.require = wrappedRequire || undefined
   mod._compile('module.exports = require;', filename)
   return mod.exports
 }
