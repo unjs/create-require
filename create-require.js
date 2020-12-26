@@ -36,7 +36,9 @@ function _createRequire (filename, wrappedRequire) {
   const mod = new nativeModule.Module(filename, null)
   mod.filename = filename
   mod.paths = nativeModule.Module._nodeModulePaths(path.dirname(filename))
-  mod.require = wrappedRequire || undefined
+  if (wrappedRequire) {
+    mod.require = wrappedRequire
+  }
   mod._compile('module.exports = require;', filename)
   return mod.exports
 }
