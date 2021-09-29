@@ -2,7 +2,7 @@
   "name": "create-require",
   "version": "1.1.1",
   "description": "Polyfill for Node.js module.createRequire (<= v12.2.0)",
-  "repository": "nuxt-contrib/create-require",
+  "repository": "unjs/create-require",
   "license": "MIT",
   "contributors": [
     {
